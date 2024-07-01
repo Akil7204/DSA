@@ -1,4 +1,4 @@
-# Recursion in JavaScript
+# Recursion
 
 Welcome to the Recursion in JavaScript repository! This repository contains various examples of recursion implemented in JavaScript. It is designed to help you understand the power and versatility of recursive functions through practical examples.
 
