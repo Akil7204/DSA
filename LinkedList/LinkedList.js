@@ -28,12 +28,25 @@ class LinkedList {
         this.size++;
     }
 
+    pop(){
+        let curr = this.head;
+        let newNode = curr
+        while(curr.next){
+            newNode = curr;
+            curr = curr.next;
+        }
+        this.tail = newNode;
+        this.tail.next = null;
+        return curr.val
+    }
+
     print(){
         let curr = this.head;
         while(curr){
             console.log(curr.val);
             curr = curr.next
         }
+        
     }
 }
 
@@ -45,6 +58,8 @@ list.insert(30);
 list.insert(40);
 list.print();
 console.log(list.getSize());
+list.pop();
+list.print()
 
 
 
