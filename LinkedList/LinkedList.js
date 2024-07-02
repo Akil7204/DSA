@@ -37,6 +37,11 @@ class LinkedList {
         }
         this.tail = newNode;
         this.tail.next = null;
+        this.size --;
+        if(this.size === 0){
+            this.head = null;
+            this.tail = null;
+        }
         return curr.val
     }
 
