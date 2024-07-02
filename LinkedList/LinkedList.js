@@ -45,6 +45,43 @@ class LinkedList {
         return curr.val
     }
 
+    prepend(val){
+        const node = new Node(val);
+        if(!this.head){
+            this.head = node;
+            this.tail = node;
+        } else {
+            node.next = this.head;
+            this.head = node;
+        }
+        this.size++;
+    }
+
+    shift(){
+        if(!this.head){
+            return undefined;
+        } else {
+            let temp = this.head;
+            this.head = temp.next;
+            this.size --;
+        }
+    }
+
+    getIndex(index){
+        if(index <= 0 || index > this.size){
+            console.log("give proper index value");
+            return null;
+        }
+        let count = 1;
+        let curr = this.head;
+        while(count != index){
+            curr = curr.next;
+            count++;
+        }
+        console.log(curr.val);
+        return curr
+    }
+
     print(){
         let curr = this.head;
         while(curr){
@@ -61,10 +98,12 @@ list.insert(10);
 list.insert(20);
 list.insert(30);
 list.insert(40);
-list.print();
-console.log(list.getSize());
+list.prepend(5);
 list.pop();
-list.print()
+list.shift();
+list.print();
+list.getIndex(6)
+console.log(list.getSize());
 
 
 
