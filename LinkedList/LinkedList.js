@@ -68,18 +68,27 @@ class LinkedList {
     }
 
     getIndex(index){
-        if(index <= 0 || index > this.size){
+        if(index < 0 || index > this.size){
             console.log("give proper index value");
             return null;
         }
-        let count = 1;
+        let count = 0;
         let curr = this.head;
         while(count != index){
             curr = curr.next;
             count++;
         }
-        console.log(curr.val);
+        // console.log(curr.val);
         return curr
+    }
+
+    set(index, value){
+        const node = this.getIndex(index);
+        if(node){
+            node.val = value;
+            return true;
+        }
+        return false;
     }
 
     print(){
@@ -98,12 +107,12 @@ list.insert(10);
 list.insert(20);
 list.insert(30);
 list.insert(40);
-list.prepend(5);
-list.pop();
-list.shift();
+// list.prepend(5);
+// list.pop();
+// list.shift();
+list.set(2,60);
 list.print();
-list.getIndex(6)
-console.log(list.getSize());
+// console.log(list.getSize());
 
 
 
