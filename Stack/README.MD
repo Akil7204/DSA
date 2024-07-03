@@ -1,5 +1,5 @@
 # Stack Data Structure in DSA
----
+
 ## What is Stack?
 A stack is a fundamental data structure in computer science that operates on a Last In, First Out (LIFO) principle. It allows operations on elements in a specific order where the last element added is the first one to be removed.
 
