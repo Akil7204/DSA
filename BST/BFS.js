@@ -82,7 +82,6 @@
 // // console.log(bst.search(30));
 // console.log(bst.bfs());
 
-
 class Node {
     constructor(val){
         this.val = val;
@@ -141,13 +140,33 @@ class BST {
 
     }
 
+    sumEvenNodes(node = this.root){
+        
+        if(!node){
+            return 0;
+        }
+        let sum = 0;
+
+        if(node.val % 2 === 0){
+            sum += node.val
+        }
+
+        sum += this.sumEvenNodes(node.left);
+        sum += this.sumEvenNodes(node.right);
+        return sum;
+    }
+
 }
 
+
+
 const bst = new BST();
-
-bst.insert(10);
+bst.insert(2);
 bst.insert(5);
-bst.insert(30);
-bst.insert(40);
+bst.insert(4);
+bst.insert(7);
+bst.insert(6);
+bst.insert(9);
+bst.insert(8);
 
-console.log(bst.bfs());
+console.log("Sum of even elements:", bst.sumEvenNodes()); // Output: 40
