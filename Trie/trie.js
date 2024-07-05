@@ -63,5 +63,5 @@ const trie = new Trie();
 trie.insert("akil");
 trie.insert("arun");
 trie.suffix("liston")
-console.log(trie.autoComplete('ak'));
-// console.log(trie.printWord());
+// console.log(trie.autoComplete('ak'));
+console.log(trie.printWord());
