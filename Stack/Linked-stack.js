@@ -21,7 +21,6 @@ class Stack {
         this.top = newNode;
         this.size++;
     }
-
     // Pop operation
     pop() {
         if (this.isEmpty()) {
@@ -32,7 +31,6 @@ class Stack {
         this.size--;
         return poppedNode.value;
     }
-
     // Peek operation
     peek() {
         if (this.isEmpty()) {
