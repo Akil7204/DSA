@@ -78,6 +78,3 @@ This repository demonstrates the use of recursion to solve various problems in J
 
 ---
 
-Feel free to explore the code, experiment with the examples, and reach out if you have any questions or feedback. Happy coding!
-
----
